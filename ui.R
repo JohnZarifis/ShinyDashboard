@@ -34,7 +34,10 @@ sidebar <- dashboardSidebar(  sidebarMenu(
            href = "https://www.i2s.gr") 
 ))
 
-body <- dashboardBody(tabItems(
+body <- dashboardBody(tags$head(
+  tags$link(rel = "stylesheet", type = "text/css", href = "custom.css")
+),
+  tabItems(
   tabItem(tabName = "dashboard",
           h2("Dashboard tab content")
   ),
