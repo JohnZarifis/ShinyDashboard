@@ -19,8 +19,9 @@ library("metricsgraphics")
 # getting Data from csv
 source("helpers.R")
 Datamining281114 <- read.delim("Datamining281114.csv", header = TRUE, sep = ";", dec=".")
+df <- create_dataset(Datamining281114)
 
-header <- dashboardHeader(title = "Basic dashboard")
+header <- dashboardHeader(title = "Aquamanager Data Miner")
 
 sidebar <- dashboardSidebar(  sidebarMenu(
   menuItem("Dashboard", tabName = "dashboard", icon = icon("dashboard")),
