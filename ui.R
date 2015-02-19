@@ -16,10 +16,12 @@ library("htmlwidgets")
 library("metricsgraphics")
 
 
-# getting Data from csv
+# load helpers.R file
 source("helpers.R")
-Datamining281114 <- read.delim("Datamining281114.csv", header = TRUE, sep = ";", dec=".")
-df <- create_dataset(Datamining281114)
+
+# getting Data from csv
+Dataset <- read.delim("DMFeb.csv", header = TRUE, sep = ";", dec=".")
+df <- create_dataset(Dataset)
 
 header <- dashboardHeader(title = "Aqua Data Miner")
 

@@ -1,4 +1,4 @@
-### Version 08.02.2015
+### Version 14.02.2015
 #
 # ------------------------
 # Create the dataset
@@ -33,12 +33,10 @@ create_dataset <- function(dataset){
                      "Closing.Fish.No" = dataset$Closing.Fish.No, 
                      "Closing.Biomass" = dataset$Closing.Biomass,      
                      "Harvest.Biomass" = dataset$Harvest.Biomass, 
-                     "Given.Biomass" = dataset$Given.Biomass,  
-                     "Taken.Biomass" = dataset$Taken.Biomass, 
                      "Biomass.Produced" = dataset$Biomass.Produced,     
                      "Biomass.Produced.Before.Sampling" = dataset$Biomass.Produced.Before.Sampl., 
-                     "FCR.Period" = dataset$FCR.Period,
-                     "FCR.Before.Sampling" = dataset$FCR.Before.Sampl., 
+                     "Econ.FCR.Period" = dataset$Econ..FCR.Period,
+                     "FCR.Before.Sampling" = dataset$Econ.FCR.Period.Before.Sampl., 
                      "Mortality.No" = dataset$Mortality.No, 
                      "Model.Mortality.No" = dataset$Model.Mortality.No, 
                      "Mortality.Deviation" = dataset$Mortality.Deviation....,
@@ -47,13 +45,20 @@ create_dataset <- function(dataset){
                      "SGR.Period" = dataset$SGR.Period...., 
                      "Max.Food.Qty" = dataset$Max.Feed.Qty,
                      "Food.Price" = dataset$Food.Price, 
-                     "Econ.FCR" = dataset$LTD.Econ..FCR, 
+                     "LTD.Econ.FCR" = dataset$LTD.Econ..FCR, 
                      "LTD.Mortality" = dataset$LTD.Mortality..,  
                      "LTD.Mortality.No" = dataset$LTD.Mortality.No, 
                      "Avg.Oxygene" = dataset$Avg..Oxygene, 
                      "Avg.Temperature" = dataset$Avg..Temp., 
                      "Feeding.Policy" = dataset$Feeding.Policy, 
-                     "Period.Thermal.Age" = dataset$Period.Thermal.Age,
+                     "Period.Day.Degrees" = dataset$Period.Day.Degrees,
+                     "Start.Av.Weight.Category" =  dataset$Start.Av..Weight.Category,
+                     "End.Av.Weight.Category" = dataset$End.Av..Weight.Category,
+                     "Final.Harvest" = dataset$Final.Harvest,
+                     "Start.Av.Weight.BioCat" = dataset$Start.Av.Weight.BioCat,
+                     "End.Av.Weight.BioCat" = dataset$End.Av.Weight.BioCat,
+                     "Age" = dataset$AGE, 
+                     "Batch.Start.Date" = dmy(dataset$BATCH.START.DATE),
                      "Days" = interval( dmy(dataset$From), dmy(dataset$To) )%/%days(1)
                     )
   
